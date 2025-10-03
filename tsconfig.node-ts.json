@@ -5,9 +5,6 @@
     "allowImportingTsExtensions": true,
     "module": "node20",
 
-    // emit
-    "emitDeclarationOnly": true,
-
     // interop constraints
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true
