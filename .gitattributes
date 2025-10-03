@@ -1,1 +1,1 @@
-*.json linguist-language=jsonc
+tsconfig.*.json linguist-language=jsonc
