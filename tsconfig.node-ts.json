@@ -1,9 +1,9 @@
 {
   "$schema": "https://www.schemastore.org/tsconfig.json",
+  "extends": "./tsconfig.node-22.json",
   "compilerOptions": {
     // modules
-    "allowImportingTsExtensions": true,
-    "module": "node20",
+    "rewriteRelativeImportExtensions": true,
 
     // interop constraints
     "erasableSyntaxOnly": true,
