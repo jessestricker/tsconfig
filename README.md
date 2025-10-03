@@ -3,7 +3,7 @@
 A collection of `tsconfig.json` files:
 
 - **[node-22](./src/tsconfig.node-22.json): Node.js v22 (LTS)**
-- **[node-22](./src/tsconfig.node-24.json): Node.js v24**
+- **[node-24](./src/tsconfig.node-24.json): Node.js v24**
 - **[node-ts](./src/tsconfig.node-ts.json): Run TypeScript directly in Node.js**
 
   Uses the compiler option `erasableSyntaxOnly` to constrain the syntax of `.ts` files.
