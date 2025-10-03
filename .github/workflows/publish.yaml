@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      id-token: write
       issues: write
       pull-requests: write
     steps:
@@ -31,6 +32,4 @@ jobs:
       - name: Set version
         run: pnpm version from-git --no-git-tag-version
       - name: Publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish --no-git-checks
