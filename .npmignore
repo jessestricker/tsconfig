@@ -2,4 +2,5 @@
 /.github/
 /.prettierignore
 /.prettierrc.yaml
+/.releaserc.yaml
 /*.tgz
