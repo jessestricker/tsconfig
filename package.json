@@ -10,9 +10,9 @@
     "access": "public"
   },
   "exports": {
-    "./node-22.json": "./tsconfig.node-22.json",
-    "./node-ts.json": "./tsconfig.node-ts.json",
-    "./pedantic.json": "./tsconfig.pedantic.json"
+    "./node-22.json": "./src/tsconfig.node-22.json",
+    "./node-ts.json": "./src/tsconfig.node-ts.json",
+    "./pedantic.json": "./src/tsconfig.pedantic.json"
   },
   "scripts": {
     "format": "prettier --write .",
