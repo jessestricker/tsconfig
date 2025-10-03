@@ -5,6 +5,7 @@
     "module": "node20",
 
     // language and environment
+    "lib": ["es2024", "esnext.collection", "esnext.iterator"],
     "target": "es2024"
   }
 }
