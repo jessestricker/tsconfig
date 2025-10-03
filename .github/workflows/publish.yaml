@@ -1,0 +1,28 @@
+name: Publish
+on:
+  release:
+concurrency:
+  group: ${{ github.workflow }}
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4.1.0
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v5.0.0
+      - name: Install dependencies
+        run: pnpm install
+      - name: Set version
+        run: pnpm version from-git --no-git-tag-version
+      - name: Publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm publish
