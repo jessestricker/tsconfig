@@ -9,7 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        tsconfig: [node-22, node-ts, pedantic]
+        tsconfig:
+          - node-22
+          - node-24
+          - node-ts
+          - pedantic
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
