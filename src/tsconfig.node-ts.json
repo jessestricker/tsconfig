@@ -5,6 +5,9 @@
     // modules
     "rewriteRelativeImportExtensions": true,
 
+    // emit
+    "noEmit": true,
+
     // interop constraints
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true
