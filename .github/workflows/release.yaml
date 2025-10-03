@@ -26,7 +26,13 @@ jobs:
         uses: actions/setup-node@v5.0.0
       - name: Install dependencies
         run: pnpm install
+      - name: Create GitHub App Token
+        uses: actions/create-github-app-token@v2.1.4
+        id: app-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         run: pnpm exec -- semantic-release
