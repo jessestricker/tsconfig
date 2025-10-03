@@ -6,7 +6,6 @@ import {
   NpmAccess,
 } from "projen/lib/javascript";
 import { ProjenrcTs } from "projen/lib/typescript";
-import path from "node:path/posix";
 
 const project = new NodeProject({
   name: "tsconfig",
@@ -35,6 +34,7 @@ const project = new NodeProject({
     privateKeySecret: "APP_PRIVATE_KEY",
   }),
   pullRequestTemplate: false,
+  minMajorVersion: 1,
   defaultReleaseBranch: "main",
   releasableCommits: ReleasableCommits.featuresAndFixes(),
   releaseToNpm: true,
