@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v5.0.0
         with:
-          node-version: ">=24.0" # contains npm>=11.5.1
+          node-version: ">=24.5" # contains npm>=11.5.1
       - name: Install dependencies
         run: pnpm install
       - name: Set version
