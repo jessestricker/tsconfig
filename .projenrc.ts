@@ -33,6 +33,7 @@ const project = new NodeProject({
     appIdSecret: "APP_ID",
     privateKeySecret: "APP_PRIVATE_KEY",
   }),
+  workflowNodeVersion: ">=24.5",
   pullRequestTemplate: false,
   minMajorVersion: 1,
   defaultReleaseBranch: "main",
