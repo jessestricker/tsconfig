@@ -19,4 +19,4 @@ jobs:
       - name: Create source file
         run: touch index.ts
       - name: Compile
-        run: npm exec -- tsc --product tsconfig.${{ matrix.tsconfig }}.json
+        run: npm exec -- tsc --project tsconfig.${{ matrix.tsconfig }}.json
