@@ -6,6 +6,9 @@
   "license": "CC0-1.0",
   "author": "Jesse Stricker",
   "repository": "https://github.com/jessestricker/tsconfig",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     "./node-22.json": "./tsconfig.node-22.json",
     "./node-ts.json": "./tsconfig.node-ts.json",
