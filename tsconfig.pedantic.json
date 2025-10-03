@@ -21,9 +21,6 @@
     "checkJs": true,
 
     // interop constraints
-    "verbatimModuleSyntax": true,
-
-    // projects
-    "composite": true
+    "verbatimModuleSyntax": true
   }
 }
