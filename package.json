@@ -1,4 +1,16 @@
 {
+  "name": "@jessestricker/tsconfig",
+  "version": "0.0.0",
+  "description": "A collection of tsconfig.json files.",
+  "homepage": "https://github.com/jessestricker/tsconfig",
+  "license": "CC0-1.0",
+  "author": "Jesse Stricker",
+  "repository": "https://github.com/jessestricker/tsconfig",
+  "exports": {
+    "./node-22.json": "./tsconfig.node-22.json",
+    "./node-ts.json": "./tsconfig.node-ts.json",
+    "./pedantic.json": "./tsconfig.pedantic.json"
+  },
   "devDependencies": {
     "typescript": "5.9.3"
   }
