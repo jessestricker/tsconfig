@@ -1,6 +1,5 @@
 {
   "$schema": "https://www.schemastore.org/tsconfig.json",
-  "extends": "./tsconfig.node-22.json",
   "compilerOptions": {
     // modules
     "rewriteRelativeImportExtensions": true,
