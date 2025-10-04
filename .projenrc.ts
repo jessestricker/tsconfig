@@ -14,6 +14,7 @@ const project = new NodeProject({
   projenrcJs: false,
   packageName: "@jessestricker/tsconfig",
   description: "A collection of tsconfig.json files.",
+  keywords: ["tsconfig", "node", "pedantic"],
   homepage: "https://github.com/jessestricker/tsconfig",
   repository: "https://github.com/jessestricker/tsconfig.git",
   authorName: "Jesse Stricker",

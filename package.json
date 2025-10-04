@@ -39,6 +39,11 @@
     "typescript": "^5.9.3"
   },
   "pnpm": {},
+  "keywords": [
+    "node",
+    "pedantic",
+    "tsconfig"
+  ],
   "license": "MIT-0",
   "homepage": "https://github.com/jessestricker/tsconfig",
   "publishConfig": {
