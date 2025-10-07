@@ -26,7 +26,7 @@ const project = new NodeProject({
   prettierOptions: {
     yaml: true,
   },
-  devDeps: ["ts-node", "typescript", "@types/node"],
+  devDeps: ["ts-node", "typescript", "@types/node", "shx"],
   githubOptions: {
     mergify: false,
   },

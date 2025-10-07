@@ -23,6 +23,10 @@
       "type": "build"
     },
     {
+      "name": "shx",
+      "type": "build"
+    },
+    {
       "name": "ts-node",
       "type": "build"
     },
