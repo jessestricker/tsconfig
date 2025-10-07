@@ -30,7 +30,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@types/node": "^24.6.2",
+    "@types/node": "^24.7.0",
     "commit-and-tag-version": "^12",
     "constructs": "^10.0.0",
     "prettier": "^3.6.2",
