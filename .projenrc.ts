@@ -39,10 +39,6 @@ const project = new NodeProject({
   minMajorVersion: 1,
   defaultReleaseBranch: "main",
   releasableCommits: ReleasableCommits.featuresAndFixes(),
-  workflowGitIdentity: {
-    name: "github-actions[bot]",
-    email: "41898282+github-actions[bot]@users.noreply.github.com",
-  },
   releaseToNpm: true,
   npmTrustedPublishing: true,
 });
