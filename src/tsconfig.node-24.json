@@ -7,10 +7,14 @@
     // language and environment
     "lib": [
       "es2024",
+      "esnext.array",
       "esnext.collection",
       "esnext.disposable",
+      "esnext.error",
+      "esnext.float16",
       "esnext.iterator",
-      "esnext.promise"
+      "esnext.promise",
+      "esnext.sharedmemory"
     ],
     "target": "es2024"
   }
