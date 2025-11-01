@@ -43,38 +43,42 @@ const project = new NodeProject({
   npmTrustedPublishing: true,
 });
 
-const TSCONFIG_NAMES = ["node-22", "node-24", "node-ts", "pedantic"];
+const tsconfigNames = ["node-22", "node-24", "node-ts", "pedantic"];
+project.package.addField(
+  "exports",
+  Object.fromEntries(
+    tsconfigNames.map((tsconfigName) => [
+      `./${tsconfigName}.json`,
+      `./src/tsconfig.${tsconfigName}.json`,
+    ]),
+  ),
+);
 
-// projen
 const projenrc = new ProjenrcTs(project);
 projenrc.tsconfig.file.addOverride("compilerOptions.module", "node20");
 project.defaultTask?.reset(
   `pnpm exec ts-node --project ${projenrc.tsconfig.file.path} ${projenrc.filePath}`,
 );
 
-// git
 project.gitattributes.addAttributes(
-  "tsconfig*.json",
+  "/src/tsconfig.*.json",
   "linguist-language=jsonc",
 );
 
-// package
 project.npmignore?.exclude(
   ...(project.github?.workflows.map((workflow) => workflow.file!.path) ?? []),
   project.artifactsDirectory,
-  "/test/",
+  "/src/index.ts",
 );
 
-// test
 project.testTask.spawn(
   project.addTask("test:tsconfig", {
-    steps: TSCONFIG_NAMES.map((name) => ({
-      exec: `pnpm exec tsc --project tsconfig.${name}.json --noEmit`,
+    steps: tsconfigNames.map((tconfigName) => ({
+      exec: `pnpm exec tsc --project src/tsconfig.${tconfigName}.json --noEmit`,
     })),
   }),
 );
 
-// format
 project.addTask("format", { exec: "prettier --write ." });
 project.testTask.spawn(
   project.addTask("format:check", { exec: "prettier --check ." }),

@@ -18,5 +18,5 @@
 /LICENSE linguist-generated
 /package.json linguist-generated
 /pnpm-lock.yaml linguist-generated
+/src/tsconfig.*.json linguist-language=jsonc
 /tsconfig.projen.json linguist-generated
-tsconfig*.json linguist-language=jsonc
