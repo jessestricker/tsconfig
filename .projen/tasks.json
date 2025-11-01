@@ -199,16 +199,16 @@
       "name": "test:tsconfig",
       "steps": [
         {
-          "exec": "pnpm exec tsc --project src/tsconfig.node-22.json --noEmit"
+          "exec": "pnpm exec tsc --project tsconfig.node-22.json --noEmit"
         },
         {
-          "exec": "pnpm exec tsc --project src/tsconfig.node-24.json --noEmit"
+          "exec": "pnpm exec tsc --project tsconfig.node-24.json --noEmit"
         },
         {
-          "exec": "pnpm exec tsc --project src/tsconfig.node-ts.json --noEmit"
+          "exec": "pnpm exec tsc --project tsconfig.node-ts.json --noEmit"
         },
         {
-          "exec": "pnpm exec tsc --project src/tsconfig.pedantic.json --noEmit"
+          "exec": "pnpm exec tsc --project tsconfig.pedantic.json --noEmit"
         }
       ]
     },
