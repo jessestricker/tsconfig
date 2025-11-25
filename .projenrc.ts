@@ -30,10 +30,7 @@ const project = new NodeProject({
   githubOptions: {
     mergify: false,
   },
-  projenCredentials: GithubCredentials.fromApp({
-    appIdSecret: "APP_ID",
-    privateKeySecret: "APP_PRIVATE_KEY",
-  }),
+  projenCredentials: GithubCredentials.fromApp(),
   workflowNodeVersion: ">=24.5",
   pullRequestTemplate: false,
   minMajorVersion: 1,
