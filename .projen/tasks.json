@@ -199,16 +199,28 @@
       "name": "test:tsconfig",
       "steps": [
         {
-          "exec": "pnpm exec tsc --project src/tsconfig.node-22.json --noEmit"
+          "exec": "pnpx --package=typescript@5.9.3 -- tsc --project src/tsconfig.node-22.json --noEmit"
         },
         {
-          "exec": "pnpm exec tsc --project src/tsconfig.node-24.json --noEmit"
+          "exec": "pnpx --package=typescript@5.9.3 -- tsc --project src/tsconfig.node-24.json --noEmit"
         },
         {
-          "exec": "pnpm exec tsc --project src/tsconfig.node-ts.json --noEmit"
+          "exec": "pnpx --package=typescript@5.9.3 -- tsc --project src/tsconfig.node-ts.json --noEmit"
         },
         {
-          "exec": "pnpm exec tsc --project src/tsconfig.pedantic.json --noEmit"
+          "exec": "pnpx --package=typescript@5.9.3 -- tsc --project src/tsconfig.pedantic.json --noEmit"
+        },
+        {
+          "exec": "pnpx --package=typescript@6.0.2 -- tsc --project src/tsconfig.node-22.json --noEmit"
+        },
+        {
+          "exec": "pnpx --package=typescript@6.0.2 -- tsc --project src/tsconfig.node-24.json --noEmit"
+        },
+        {
+          "exec": "pnpx --package=typescript@6.0.2 -- tsc --project src/tsconfig.node-ts.json --noEmit"
+        },
+        {
+          "exec": "pnpx --package=typescript@6.0.2 -- tsc --project src/tsconfig.pedantic.json --noEmit"
         }
       ]
     },
@@ -238,7 +250,7 @@
       },
       "steps": [
         {
-          "exec": "pnpm dlx npm-check-updates@18 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/node,prettier,projen,shx,ts-node,typescript"
+          "exec": "pnpm dlx npm-check-updates@18 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/node,prettier,projen,shx,ts-node"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
