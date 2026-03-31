@@ -3,6 +3,7 @@
   "compilerOptions": {
     // modules
     "module": "node20",
+    "types": ["node"],
 
     // language and environment
     "lib": ["es2024", "esnext.collection", "esnext.iterator"],

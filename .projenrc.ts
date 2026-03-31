@@ -40,6 +40,7 @@ const project = new NodeProject({
   npmTrustedPublishing: true,
 });
 
+// exports
 const tsconfigNames = ["node-22", "node-24", "node-ts", "pedantic"];
 project.package.addField(
   "exports",
@@ -51,31 +52,40 @@ project.package.addField(
   ),
 );
 
+// .projenrc.ts
 const projenrc = new ProjenrcTs(project);
-projenrc.tsconfig.file.addOverride("compilerOptions.module", "node20");
+projenrc.tsconfig.file.addOverride("compilerOptions.module", "nodenext");
+projenrc.tsconfig.file.addOverride("compilerOptions.target", "esnext");
 project.defaultTask?.reset(
   `pnpm exec ts-node --project ${projenrc.tsconfig.file.path} ${projenrc.filePath}`,
 );
 
+// git
 project.gitattributes.addAttributes(
   "/src/tsconfig.*.json",
   "linguist-language=jsonc",
 );
 
+// packaging
 project.npmignore?.exclude(
   ...(project.github?.workflows.map((workflow) => workflow.file!.path) ?? []),
   project.artifactsDirectory,
   "/src/index.ts",
 );
 
+// testing
+const supportedTypeScriptVersions = ["5.9.3", "6.0.2"];
 project.testTask.spawn(
   project.addTask("test:tsconfig", {
-    steps: tsconfigNames.map((tconfigName) => ({
-      exec: `pnpm exec tsc --project src/tsconfig.${tconfigName}.json --noEmit`,
-    })),
+    steps: supportedTypeScriptVersions.flatMap((typeScriptVersion) =>
+      tsconfigNames.map((tconfigName) => ({
+        exec: `pnpx --package=typescript@${typeScriptVersion} -- tsc --project src/tsconfig.${tconfigName}.json --noEmit`,
+      })),
+    ),
   }),
 );
 
+// prettier
 project.addTask("format", { exec: "prettier --write ." });
 project.testTask.spawn(
   project.addTask("format:check", { exec: "prettier --check ." }),
