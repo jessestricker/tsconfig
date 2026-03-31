@@ -30,9 +30,14 @@ Then, use one (or more) of the provided base configurations for the `extends` op
 ```jsonc
 {
   "extends": [
-    "@jessestricker/tsconfig/node-24.json",
     "@jessestricker/tsconfig/pedantic.json",
+    "@jessestricker/tsconfig/node-24.json",
   ],
   // ...
 }
 ```
+
+> [!IMPORTANT]
+> The order in the `extends` property is important, as later entries override compiler options from earlier entries.
+>
+> In particular, make sure that `pedantic` comes before any of the `node-...` configs.

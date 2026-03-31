@@ -16,11 +16,17 @@
 
     // modules
     "noUncheckedSideEffectImports": true,
+    "types": [],
 
     // javascript support
     "checkJs": true,
 
     // interop constraints
-    "verbatimModuleSyntax": true
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+
+    // language and environment
+    "libReplacement": false
   }
 }

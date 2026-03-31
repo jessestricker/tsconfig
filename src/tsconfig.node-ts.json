@@ -3,6 +3,7 @@
   "compilerOptions": {
     // modules
     "rewriteRelativeImportExtensions": true,
+    "types": ["node"],
 
     // interop constraints
     "erasableSyntaxOnly": true,
