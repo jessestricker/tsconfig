@@ -30,11 +30,11 @@
     "organization": false
   },
   "devDependencies": {
-    "@types/node": "^24.12.0",
+    "@types/node": "^24.12.2",
     "commit-and-tag-version": "^12",
     "constructs": "^10.0.0",
     "prettier": "^3.8.1",
-    "projen": "^0.99.26",
+    "projen": "^0.99.34",
     "shx": "^0.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.2"
@@ -45,6 +45,12 @@
     "pedantic",
     "tsconfig"
   ],
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "onFail": "ignore"
+    }
+  },
   "license": "MIT-0",
   "homepage": "https://github.com/jessestricker/tsconfig",
   "publishConfig": {
