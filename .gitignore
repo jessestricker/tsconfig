@@ -37,6 +37,5 @@ jspm_packages/
 !/.github/workflows/upgrade-main.yml
 !/.prettierignore
 !/.prettierrc.yml
-!/.npmrc
 !/tsconfig.projen.json
 !/.projenrc.ts

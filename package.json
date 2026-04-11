@@ -30,11 +30,11 @@
     "organization": false
   },
   "devDependencies": {
-    "@types/node": "^24.12.0",
+    "@types/node": "^24.12.2",
     "commit-and-tag-version": "^12",
     "constructs": "^10.0.0",
-    "prettier": "^3.8.1",
-    "projen": "^0.99.26",
+    "prettier": "^3.8.2",
+    "projen": "^0.99.47",
     "shx": "^0.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.2"
@@ -45,12 +45,20 @@
     "pedantic",
     "tsconfig"
   ],
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=10",
+      "onFail": "ignore"
+    }
+  },
   "license": "MIT-0",
   "homepage": "https://github.com/jessestricker/tsconfig",
   "publishConfig": {
     "access": "public"
   },
   "version": "0.0.0",
+  "packageManager": "pnpm@10.33.0",
   "exports": {
     "./node-22.json": "./src/tsconfig.node-22.json",
     "./node-24.json": "./src/tsconfig.node-24.json",
