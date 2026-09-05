@@ -8,6 +8,7 @@
   "scripts": {
     "build": "pnpx projen build",
     "bump": "pnpx projen bump",
+    "bump:releasable-commits": "pnpx projen bump:releasable-commits",
     "clobber": "pnpx projen clobber",
     "compile": "pnpx projen compile",
     "default": "pnpx projen default",
@@ -30,14 +31,14 @@
     "organization": false
   },
   "devDependencies": {
-    "@types/node": "^24.12.0",
+    "@types/node": "^24.13.3",
     "commit-and-tag-version": "^12",
     "constructs": "^10.0.0",
-    "prettier": "^3.8.1",
-    "projen": "^0.99.26",
+    "prettier": "^3.9.6",
+    "projen": "^0.103.19",
     "shx": "^0.4.0",
     "ts-node": "^10.9.2",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   },
   "pnpm": {},
   "keywords": [
@@ -45,12 +46,20 @@
     "pedantic",
     "tsconfig"
   ],
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=10",
+      "onFail": "ignore"
+    }
+  },
   "license": "MIT-0",
   "homepage": "https://github.com/jessestricker/tsconfig",
   "publishConfig": {
     "access": "public"
   },
   "version": "0.0.0",
+  "packageManager": "pnpm@10.33.0",
   "exports": {
     "./node-22.json": "./src/tsconfig.node-22.json",
     "./node-24.json": "./src/tsconfig.node-24.json",
