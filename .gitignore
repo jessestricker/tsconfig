@@ -4,6 +4,7 @@
 !/.projen/deps.json
 !/.projen/files.json
 !/.github/workflows/pull-request-lint.yml
+!/pnpm-workspace.yaml
 !/package.json
 !/LICENSE
 !/.npmignore
@@ -37,6 +38,5 @@ jspm_packages/
 !/.github/workflows/upgrade-main.yml
 !/.prettierignore
 !/.prettierrc.yml
-!/.npmrc
 !/tsconfig.projen.json
 !/.projenrc.ts
