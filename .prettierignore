@@ -3,10 +3,10 @@
 .github/workflows/build.yml
 .github/workflows/pull-request-lint.yml
 .github/workflows/release.yml
+.github/workflows/self-mutation.yml
 .github/workflows/upgrade-main.yml
 .gitignore
 .npmignore
-.npmrc
 .prettierignore
 .prettierrc.yml
 .projen/deps.json
@@ -14,5 +14,6 @@
 .projen/tasks.json
 LICENSE
 package.json
+pnpm-workspace.yaml
 tsconfig.projen.json
 pnpm-lock.yaml
